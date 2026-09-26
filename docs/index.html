@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSV Relationship Finder</title><link rel="stylesheet" href="styles.css"></head><body><div class="shell"><div class="topbar"><div class="brand">CSV Relationship Finder</div><a href="https://raoulmunet.github.io/dev-data-tools/">Dev Data Tools</a></div><section class="hero"><h1>CSV Relationship Finder</h1><p class="muted">Paste multiple named CSV datasets and discover likely relationships from column names, uniqueness and value overlap.</p></section><section class="panel"><p class="muted">Format: start each dataset with <code>### filename.csv</code>.</p><textarea id="input">### customers.csv
+id,name
+1,Ana
+2,Bob
+3,Cara
+
+### orders.csv
+order_id,customer_id,total
+100,1,45
+101,2,80
+102,1,20
+
+### payments.csv
+payment_id,order_id,amount
+900,100,45
+901,101,80</textarea><div class="toolbar"><button class="primary" id="run">Find relationships</button></div><div id="summary" class="statrow"></div><div id="result"></div></section></div><script src="app.js"></script></body></html>
